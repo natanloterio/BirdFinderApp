@@ -1,2 +1,2 @@
 # BirdScannerApp
-Find you what bird is singing by it's sound
+Find which bird is singing by it's sound
