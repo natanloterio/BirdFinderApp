@@ -1,0 +1,53 @@
+
+
+def versions = [:]
+versions.android_gradle_plugin = "3.2.1"
+versions.kotlin = "1.3.50"
+versions.coroutine_version = "1.0.1"
+versions.appcompat = "1.1.0"
+versions.ktx_core = "1.0.1"
+versions.ktx_fragment = "1.0.1"
+versions.lifecycle = "2.0.0-rc01"
+versions.android_junit = "1.1.1"
+versions.junit = "5.1.1"
+versions.espresso_core = "3.2.0"
+
+
+def kotlin = [:]
+kotlin.kotlin_jre = "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$versions.kotlin"
+kotlin.kotlin_gradle_plugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:$versions.kotlin"
+kotlin.coroutines_core = "org.jetbrains.kotlinx:kotlinx-coroutines-core:$versions.coroutine_version"
+kotlin.coroutines_android = "org.jetbrains.kotlinx:kotlinx-coroutines-android:$versions.coroutine_version"
+
+
+def android = [:]
+android.appcompat = "androidx.appcompat:appcompat:$versions.appcompat"
+android.fragment = "androidx.fragment:fragment:$versions.appcompat"
+android.ktx_core = "androidx.core:core-ktx:$versions.ktx_core"
+android.ktx_fragment = "androidx.fragment:fragment-ktx:$versions.ktx_fragment"
+
+
+def test = [:]
+test.junit = "org.junit.jupiter:junit-jupiter-api:$versions.junit"
+test.jupiter_engine = "org.junit.jupiter:junit-jupiter-engine:$versions.junit"
+test.vintage_engine = "org.junit.vintage:junit-vintage-engine:$versions.junit"
+test.kotlin_junit = "org.jetbrains.kotlin:kotlin-test-junit:$versions.kotlin"
+test.mockk = "io.mockk:mockk:1.9"
+
+
+
+def build_versions = [:]
+build_versions.min_sdk = 21
+build_versions.target_sdk = 28
+
+
+
+def deps = [:]
+deps.kotlin = kotlin
+deps.android = android
+deps.test = test
+deps.android_gradle_plugin = "com.android.tools.build:gradle:$versions.android_gradle_plugin"
+
+
+ext.build_versions = build_versions
+ext.deps = deps
